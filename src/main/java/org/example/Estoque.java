@@ -16,6 +16,10 @@ class Estoque {
         return capacidadeMaxima;
     }
 
+    public void setCapacidadeMaxima(int capacidadeMaxima) {
+        this.capacidadeMaxima = capacidadeMaxima;
+    }
+
     public List<Produto> getProdutos() {
         return produtos;
     }
@@ -24,7 +28,14 @@ class Estoque {
         produtos.add(produto);
     }
 
+    public void limparLista() {
+        produtos.clear();
+    }
+
     public void exibirProdutos() {
+        if(produtos.isEmpty()) {
+            System.out.println("não há produtos na lista :P");
+        }
         for (Produto produto : produtos) {
             System.out.println(produto);
         }

@@ -6,7 +6,7 @@ import java.util.List;
 class Otimizador {
     public static List<Produto> otimizarEstoque(List<Produto> produtos, int capacidadeMaxima) {
         int n = produtos.size();
-        int[][] dp = new int[n + 1][capacidadeMaxima + 1];
+        double[][] dp = new double[n + 1][capacidadeMaxima + 1];
 
 
         for (int i = 1; i <= n; i++) {

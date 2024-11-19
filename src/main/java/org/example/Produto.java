@@ -3,9 +3,9 @@ package org.example;
 class Produto {
     private String nome;
     private int peso;
-    private int valor;
+    private double valor;
 
-    public Produto(String nome, int peso, int valor) {
+    public Produto(String nome, int peso, double valor) {
         this.nome = nome;
         this.peso = peso;
         this.valor = valor;
@@ -19,7 +19,7 @@ class Produto {
         return peso;
     }
 
-    public int getValor() {
+    public double getValor() {
         return valor;
     }
 
