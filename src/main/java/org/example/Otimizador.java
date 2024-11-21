@@ -12,8 +12,8 @@ class Otimizador {
         for (int i = 1; i <= n; i++) {
             Produto produto = produtos.get(i - 1);
             for (int w = 1; w <= capacidadeMaxima; w++) {
-                if (produto.getPeso() <= w) {
-                    dp[i][w] = Math.max(produto.getValor() + dp[i - 1][w - produto.getPeso()], dp[i - 1][w]);
+                if (produto.getVolume() <= w) {
+                    dp[i][w] = Math.max(produto.getValor() + dp[i - 1][w - produto.getVolume()], dp[i - 1][w]);
                 } else {
                     dp[i][w] = dp[i - 1][w];
                 }
@@ -27,7 +27,7 @@ class Otimizador {
             if (dp[i][w] != dp[i - 1][w]) {
                 Produto produto = produtos.get(i - 1);
                 selecionados.add(produto);
-                w -= produto.getPeso();
+                w -= produto.getVolume();
             }
         }
 
