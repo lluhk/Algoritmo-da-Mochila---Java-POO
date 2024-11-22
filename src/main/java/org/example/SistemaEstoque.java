@@ -57,6 +57,8 @@ public class SistemaEstoque {
     }
 
     public static void otimizarEstoque() {
+        exibirEstoque();
+
         List<Produto> produtosOtimizado = Otimizador.otimizarEstoque(estoque.getProdutos(), estoque.getCapacidadeMaxima());
 
         System.out.println("\nProdutos selecionados para otimização:");
