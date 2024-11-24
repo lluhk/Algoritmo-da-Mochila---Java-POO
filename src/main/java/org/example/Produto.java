@@ -28,9 +28,9 @@ class Produto {
     }
 
     public int getVolume() {
-        int myInt = (int) (comprimento * largura * altura);
-        return myInt;
+        return (int) Math.round(comprimento * largura * altura);
     }
+
 
     @Override
     public String toString() {
